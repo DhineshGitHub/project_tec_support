@@ -34,7 +34,7 @@ $incidents = $db->query($sql);
 </tr>
   <?php endforeach; ?>
 </table>
-
+<?php include('../view/footer.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

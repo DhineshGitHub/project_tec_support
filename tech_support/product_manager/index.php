@@ -4,8 +4,6 @@ require('../model/database.php');
 
 if (isset($_POST['delete_submit'])) {
 
-  require("../model/database.php");
-
   $product_code = $_POST['product_code'];
 
   $sql = "DELETE FROM products WHERE productCode='$product_code'";
