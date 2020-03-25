@@ -7,7 +7,7 @@
         <li><a href="under_construction.php">Manage Customers</a></li>
         <li><a href="under_construction.php">Create Incident</a></li>
         <li><a href="under_construction.php">Assign Incident</a></li>
-        <li><a href="under_construction.php">Display Incidents</a></li>
+        <li><a href="incidents">Display Incidents</a></li>
     </ul>
 
     <h2>Technicians</h2>
