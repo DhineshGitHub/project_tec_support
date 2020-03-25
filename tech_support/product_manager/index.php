@@ -2,6 +2,21 @@
 require('../model/database.php');
 //require('../model/product_db.php');
 
+if (isset($_POST['delete_submit'])) {
+
+  require("../model/database.php");
+
+  $product_code = $_POST['product_code'];
+
+  $sql = "DELETE FROM products WHERE productCode='$product_code'";
+
+  if ($db->exec($sql)) {
+    header("Location: index.php");
+  }else {
+    echo "error";
+  }
+}
+
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
 } else if (isset($_GET['action'])) {
@@ -32,7 +47,7 @@ if (isset($_POST['action'])) {
 						<input type="hidden" name="action" value="delete_product"/>
 						<input type="hidden" name="product_code"
 						value="<?php echo $product['productCode'];?>"/>
-						<input type="submit" value="delete" />
+						<input type="submit" name="delete_submit" value="Delete" />
 					</form>
 				</td>
 			</tr>
@@ -40,3 +55,14 @@ if (isset($_POST['action'])) {
 	</table>
 <?php } ?>
 <?php include('../view/footer.php'); ?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+
+  </body>
+</html>
